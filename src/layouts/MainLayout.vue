@@ -2,10 +2,10 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated class="headerBorder bg-secondary">
       <q-toolbar>
-        <q-toolbar-title>
+        <q-toolbar-title class="text-h6 text-weight-light">
           Erik Elze Events
         </q-toolbar-title>
-        <q-list padding class="displayFlex">
+        <q-list padding dense class="displayFlex text-weight-thin text-h6">
             <q-item
               v-ripple
               active-class="my-menu-link"
