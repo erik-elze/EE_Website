@@ -3,9 +3,9 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          Quasar App
+          Erik Elze Events
         </q-toolbar-title>
-        <q-list padding>
+        <q-list padding class="displayFlex">
             <q-item
               v-ripple
               active-class="my-menu-link"
@@ -74,3 +74,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.displayFlex {
+  display: flex;
+}
+</style>
