@@ -83,4 +83,8 @@ export default {
 .headerBorder {
   border-bottom: 4px solid $accent;
 }
+
+.my-menu-link {
+  background-color: $accent;
+}
 </style>
