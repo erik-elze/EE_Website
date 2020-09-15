@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated class="headerBorder bg-secondary">
       <q-toolbar>
         <q-toolbar-title>
           Erik Elze Events
@@ -78,5 +78,9 @@ export default {
 <style lang="scss">
 .displayFlex {
   display: flex;
+}
+
+.headerBorder {
+  border-bottom: 4px solid $accent;
 }
 </style>
