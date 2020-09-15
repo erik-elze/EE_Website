@@ -2,44 +2,63 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
-
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-list padding>
+            <q-item
+              v-ripple
+              active-class="my-menu-link"
+              clickable
+              exact
+              to='/'>
+              <q-item-section>
+                Home
+              </q-item-section>
+            </q-item>
+            <q-item
+              v-ripple
+              active-class="my-menu-link"
+              clickable
+              exact
+              to='/licht'>
+              <q-item-section>
+                Licht
+              </q-item-section>
+            </q-item>
+            <q-item
+              v-ripple
+              active-class="my-menu-link"
+              clickable
+              exact
+              to='/ton'>
+              <q-item-section>
+                Ton
+              </q-item-section>
+            </q-item>
+            <q-item
+              v-ripple
+              active-class="my-menu-link"
+              clickable
+              exact
+              to='/video'>
+              <q-item-section>
+                Video
+              </q-item-section>
+            </q-item>
+            <q-item
+              v-ripple
+              active-class="my-menu-link"
+              clickable
+              exact
+              to='/kontakt'>
+              <q-item-section>
+                Kontakt
+              </q-item-section>
+            </q-item>
+      </q-list>
       </q-toolbar>
     </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -47,9 +66,8 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
 
-const linksData = [
+var linkData = [
   {
     title: 'Docs',
     caption: 'quasar.dev',
@@ -96,11 +114,8 @@ const linksData = [
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
   data () {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: linksData
     }
   }
 }
