@@ -1,4 +1,4 @@
-# EE Events Website (ee_website)
+# EE Events Website
 
 Website for Erik Elze Events
 
